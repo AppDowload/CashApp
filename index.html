@@ -4,154 +4,45 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CashApp</title>
-
 <style>
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
-
-body{
-    font-family:Arial, sans-serif;
-    background:#f5f7fa;
-    color:#222;
-}
-
-.container{
-    max-width:500px;
-    margin:auto;
-    padding:25px;
-}
-
-.app-header{
-    text-align:center;
-    margin-top:20px;
-}
-
-.logo{
-    width:120px;
-    height:120px;
-    border-radius:24px;
-    object-fit:contain;
-    box-shadow:0 5px 15px rgba(0,0,0,.15);
-}
-
-.app-name{
-    font-size:28px;
-    font-weight:bold;
-    margin-top:15px;
-}
-
-.publisher{
-    color:#666;
-    margin-top:5px;
-}
-
-.stats{
-    display:flex;
-    justify-content:space-between;
-    margin:30px 0;
-    text-align:center;
-}
-
-.stat{
-    flex:1;
-}
-
-.stat-value{
-    font-size:18px;
-    font-weight:bold;
-}
-
-.stat-label{
-    font-size:13px;
-    color:#777;
-}
-
-.download-btn{
-    display:block;
-    width:100%;
-    background:#28a745;
-    color:white;
-    text-decoration:none;
-    text-align:center;
-    padding:16px;
-    border-radius:14px;
-    font-size:18px;
-    font-weight:bold;
-    transition:.3s;
-}
-
-.download-btn:hover{
-    transform:translateY(-2px);
-}
-
-.footer{
-    text-align:center;
-    color:#999;
-    margin-top:30px;
-    font-size:12px;
-}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:Arial,sans-serif;background:#f5f7fa;color:#222}
+.container{max-width:500px;margin:auto;padding:25px}
+.app-header{text-align:center;margin-top:20px}
+.logo{width:120px;height:120px;border-radius:24px;object-fit:contain;box-shadow:0 5px 15px rgba(0,0,0,.15)}
+.app-name{font-size:28px;font-weight:bold;margin-top:15px}
+.publisher{color:#666;margin-top:5px}
+.stats{display:flex;justify-content:space-between;margin:30px 0;text-align:center}
+.stat{flex:1}
+.stat-value{font-size:18px;font-weight:bold}
+.stat-label{font-size:13px;color:#777}
+.download-btn{display:block;width:100%;background:#28a745;color:white;text-decoration:none;text-align:center;padding:16px;border-radius:14px;font-size:18px;font-weight:bold;transition:.3s}
+.download-btn:hover{transform:translateY(-2px)}
+.footer{text-align:center;color:#999;margin-top:30px;font-size:12px}
 </style>
 </head>
-
 <body>
-
 <div class="container">
-
-    <div class="app-header">
-        <img src="Logo%20CashApp.jpg" class="logo" alt="CashApp Logo">
-
-        <div class="app-name">CashApp</div>
-
-        <div class="publisher">
-            Versi Terbaru
-        </div>
-    </div>
-
-    <div class="stats">
-        <div class="stat">
-            <div class="stat-value">4.9★</div>
-            <div class="stat-label">Rating</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-value">Android</div>
-            <div class="stat-label">Platform</div>
-        </div>
-
-        <div class="stat">
-            <div class="stat-value">Latest</div>
-            <div class="stat-label">Version</div>
-        </div>
-    </div>
-
-    <a class="download-btn"
-       id="downloadBtn"
-       href="https://github.com/AppDowload/CashApp/releases/latest/download/CashApp.apk">
-        Download APK
-    </a>
-
-    <div class="footer">
-        © CashApp
-    </div>
-
+<div class="app-header">
+<img src="Logo%20CashApp.jpg" class="logo" alt="CashApp Logo">
+<div class="app-name">CashApp</div>
+<div class="publisher">Versi v1.0</div>
 </div>
-
+<div class="stats">
+<div class="stat"><div class="stat-value">4.9★</div><div class="stat-label">Rating</div></div>
+<div class="stat"><div class="stat-value">Android</div><div class="stat-label">Platform</div></div>
+<div class="stat"><div class="stat-value">v1.0</div><div class="stat-label">Version</div></div>
+</div>
+<a class="download-btn" id="downloadBtn" href="https://github.com/AppDowload/CashApp/releases/download/v1.0/CashApp.apk">Download APK</a>
+<div class="footer">© CashApp</div>
+</div>
 <script>
-document.getElementById("downloadBtn").addEventListener("click", function(e) {
-    e.preventDefault();
-
-    this.innerText = "Sedang Mengunduh...";
-
-    const link = this.href;
-
-    setTimeout(function() {
-        window.location.href = link;
-    }, 300);
+document.getElementById("downloadBtn").addEventListener("click",function(e){
+e.preventDefault();
+this.innerText="Sedang Mengunduh...";
+const link=this.href;
+setTimeout(function(){window.location.href=link},300);
 });
 </script>
-
 </body>
 </html>
